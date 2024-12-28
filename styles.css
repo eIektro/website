@@ -1,0 +1,135 @@
+/* Temel Stil */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif; /* Open Sans fontu eklendi */
+    background-color: #ffffff;
+    color: #4a4a4a; /* Daha açık koyu gri */
+    display: flex;
+    justify-content: center; /* Yatay ortalama */
+    align-items: center;     /* Dikey ortalama */
+    min-height: 100vh;       /* Tüm ekran yüksekliğini kapla */
+    transition: background-color 0.3s, color 0.3s;
+    position: relative;      /* Toggle linki için gerekli */
+}
+
+/* Container */
+.container {
+    max-width: 800px; /* Maksimum genişlik ayarlandı */
+    width: 90%;        /* Responsive genişlik */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-weight: 700; /* Kalın font ağırlığı */
+    font-size: 2.3em;  /* Yazı boyutu biraz büyültüldü */
+    margin: 0 0 10px 0;
+}
+
+header p {
+    font-size: 1.3em; /* Yazı boyutu biraz büyültüldü */
+    margin: 0;
+}
+
+/* Koyu Mod Toggle Linki */
+a#toggle-theme {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 1.1em; /* Yazı boyutu biraz büyültüldü */
+    color: #4a4a4a; /* Daha açık koyu gri */
+}
+
+a#toggle-theme:visited {
+    color: #4a4a4a; /* Ziyaret edilmiş olsa bile aynı renk */
+}
+
+/* Tüm Bağlantılar */
+a {
+    text-decoration: underline;
+    color: #4a4a4a; /* Daha açık koyu gri */
+    font-size: 1.1em; /* Yazı boyutu biraz büyültüldü */
+}
+
+a:visited {
+    color: #4a4a4a; /* Ziyaret edilmiş olsa bile aynı renk */
+}
+
+/* "Koral Teknoloji" Bağlantısı İçin Özel Stil */
+.tech-link {
+    font-size: 1.0em; /* Paragrafla aynı boyutta */
+}
+
+/* Ana İçerik */
+main {
+    width: 100%;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 40px; /* Liste içeriğini biraz daha sağa kaydırdık */
+}
+
+li {
+    margin-bottom: 15px; /* Maddeler arasındaki boşluk artırıldı */
+    font-size: 1.1em;    /* Yazı boyutu biraz büyültüldü */
+}
+
+/* E-posta ve CV Bağlantıları İçin Özel Stil */
+li a[href^="mailto:"],
+li a[href^="cv"] {
+    font-size: 1em; /* E-posta ve CV bağlantılarının yazı boyutunu biraz büyültüldü */
+}
+
+/* Koyu Mod Stil */
+body.dark-mode {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+body.dark-mode a {
+    color: #ffffff;
+}
+
+body.dark-mode a#toggle-theme {
+    color: #ffffff;
+}
+
+/* Responsive Tasarım için Medya Sorguları */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.9em; /* Mobilde yazı boyutu biraz büyültüldü */
+    }
+
+    header p {
+        font-size: 1.1em; /* Mobilde yazı boyutu biraz büyültüldü */
+    }
+
+    a#toggle-theme {
+        font-size: 1.0em;    /* Mobilde yazı boyutu biraz büyültüldü */
+        top: 15px;
+        right: 15px;
+    }
+
+    a {
+        font-size: 1.0em;    /* Mobilde yazı boyutu biraz büyültüldü */
+    }
+
+    li {
+        font-size: 1.0em;    /* Mobilde yazı boyutu biraz büyültüldü */
+    }
+
+    /* "Koral Teknoloji" Bağlantısı İçin Mobilde Özel Stil */
+    .tech-link {
+        font-size: 1.0em; /* Mobilde paragrafla aynı boyutta */
+    }
+}
